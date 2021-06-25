@@ -36,6 +36,7 @@ const createNote = () => {
     updatedAt: timeStamp,
   });
   saveNotes(notes); // notes is stringified
+  return id;
 };
 
 // remove a note from the list
