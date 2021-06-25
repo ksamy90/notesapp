@@ -53,9 +53,26 @@ const renderNotes = function() {
   }
 };
 
+const initializeEditPage = (noteId) => {
+  const titleElement = document.getElementById("noteTitle");
+  const bodyElement = document.getElementById("noteBody");
+  const dateElement = document.getElementById("lastEdited");
+  const notes = getNotes();
+  const note = notes.find(function(note) {
+    return note.id === noteId;
+  });
+
+  if (!note) {
+    location.assign("/index.html");
+  }
+
+  titleElement.value = note.title;
+  bodyElement.value = note.body;
+};
+
 // generate the last edit message
 let generateLastEdited = function(timestamp) {
   return `Last edited ${moment(timestamp).fromNow()}`;
 };
 
-export { generateNoteDOM, renderNotes };
+export { generateNoteDOM, renderNotes, initializeEditPage };
