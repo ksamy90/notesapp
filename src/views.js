@@ -32,8 +32,8 @@ const generateNoteDOM = function(note) {
 const renderNotes = function() {
   const notesEl = document.getElementById("notes");
   const filters = getFilters();
-  // const notesData = getNotes();
-  const notes = sortNotes(filters.sortBy);
+  const notesData = getNotes();
+  const notes = sortNotes(notesData, filters.sortBy);
   const filteredNotes = notes.filter((note) => {
     return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
   });
