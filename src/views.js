@@ -75,4 +75,4 @@ let generateLastEdited = function(timestamp) {
   return `Last edited ${moment(timestamp).fromNow()}`;
 };
 
-export { generateNoteDOM, renderNotes, initializeEditPage };
+export { generateNoteDOM, renderNotes, initializeEditPage, generateLastEdited };

@@ -100,6 +100,7 @@ const updateNote = (id, updates) => {
     note.updatedAt = moment().valueOf();
   }
   saveNotes(notes);
+  return note;
 };
 
 notes = getSavedNotes();
