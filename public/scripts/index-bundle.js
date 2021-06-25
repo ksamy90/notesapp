@@ -5284,7 +5284,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _notes = __webpack_require__(/*! ./notes */ \"./src/notes.js\");\n\nvar _views = __webpack_require__(/*! ./views */ \"./src/views.js\");\n\n(0, _views.renderNotes)();\n\ndocument.getElementById(\"createNote\").addEventListener(\"click\", function (e) {\n  var id = (0, _notes.createNote)();\n  location.assign(\"/edit.html#\" + id);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _filters = __webpack_require__(/*! ./filters */ \"./src/filters.js\");\n\nvar _notes = __webpack_require__(/*! ./notes */ \"./src/notes.js\");\n\nvar _views = __webpack_require__(/*! ./views */ \"./src/views.js\");\n\n(0, _views.renderNotes)();\n\ndocument.getElementById(\"createNote\").addEventListener(\"click\", function (e) {\n  var id = (0, _notes.createNote)();\n  location.assign(\"/edit.html#\" + id);\n});\n\ndocument.getElementById(\"searchText\").addEventListener(\"input\", function (e) {\n  (0, _filters.setFilters)({ searchText: e.target.value });\n  (0, _views.renderNotes)();\n});\n\ndocument.getElementById(\"filterBy\").addEventListener(\"change\", function (e) {\n  (0, _filters.setFilters)({ sortBy: e.target.value });\n  (0, _views.renderNotes)();\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
