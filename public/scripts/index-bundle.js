@@ -5284,7 +5284,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _notes = __webpack_require__(/*! ./notes */ \"./src/notes.js\");\n\nvar _views = __webpack_require__(/*! ./views */ \"./src/views.js\");\n\nvar notes = (0, _notes.getNotes)();\n\n(0, _views.renderNotes)();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _notes = __webpack_require__(/*! ./notes */ \"./src/notes.js\");\n\nvar _views = __webpack_require__(/*! ./views */ \"./src/views.js\");\n\n(0, _views.renderNotes)();\n\ndocument.getElementById(\"createNote\").addEventListener(\"click\", function (e) {\n  var id = (0, _notes.createNote)();\n  location.assign(\"/edit.html#\" + id);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
